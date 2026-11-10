@@ -1,0 +1,36 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "amazon",
+    "rateLimits": [
+        {"max": 5, "window": "second", "scope": "key", "operations": ["createGlossary"], "note": "ImportTerminology: 5 transactions a second"},
+        {"max": 10, "window": "second", "scope": "key", "operations": ["glossary", "glossaryEntries"], "note": "GetTerminology: 10 transactions a second"},
+        {"max": 10, "window": "second", "scope": "key", "operations": ["glossaries"], "note": "ListTerminologies: 10 transactions a second"},
+        {"max": 5, "window": "second", "scope": "key", "operations": ["deleteGlossary"], "note": "DeleteTerminology: 5 transactions a second"}
+    ],
+    "rights": {
+        "commercial": "unknown",
+        "openSourceRequired": null,
+        "caching": {"permission": "unknown", "maxTtl": null},
+        "storage": "unknown",
+        "redistribution": "unknown",
+        "attribution": {
+            "required": false,
+            "text": "Machine Translation",
+            "url": null,
+            "where": ["display"]
+        },
+        "licence": null
+    },
+    "requirements": {
+        "key": true,
+        "userAgent": {"required": false, "pattern": null}
+    },
+    "provenance": {
+        "terms": "https://aws.amazon.com/translate/faqs/",
+        "policy": "https://docs.aws.amazon.com/translate/latest/dg/what-is-limits.html",
+        "verifiedAt": "2026-11-10",
+        "declaredBy": "maintainer",
+        "contact": null,
+        "notes": "Read on 2026-11-10. Limits: the terminology calls' rates are declared; TranslateText's and TranslateDocument's are not published. A text holds at most 10,000 bytes (UTF-8), a document 100 KB and 100,000 characters, English on one side; 100 terminologies a region (adjustable), 20 MB each, 256 terms used by TranslateText, one terminology a translation. Throttling answers 400 (TooManyRequestsException), not 429: a ProviderException the registry falls back past. Free tier: 2,000,000 characters a month of standard text translation for 12 months from the first request; none for real-time document translation. Attribution: not required; AWS suggests attributing translations to machine translation. Data retention: Amazon may store and use text inputs to provide, maintain and improve Amazon Translate and other Amazon machine-learning technologies, possibly in another region; an AWS Organizations AI services opt-out policy stops it, and AWS Support deletes what was stored on request. Commercial use: no restriction stated in the pages read, hence unknown."
+    }
+}

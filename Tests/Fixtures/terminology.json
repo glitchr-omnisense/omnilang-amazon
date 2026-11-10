@@ -1,0 +1,1 @@
+{"TerminologyProperties": {"Name": "rooms-fr-en", "Arn": "arn:aws:translate:eu-west-1:123456789012:terminology/rooms-fr-en/LATEST", "SourceLanguageCode": "fr", "TargetLanguageCodes": ["en"], "TermCount": 2, "SizeBytes": 64, "Format": "CSV", "Directionality": "UNI", "CreatedAt": 1794301200.123, "LastUpdatedAt": 1794301200.123}, "AuxiliaryDataLocation": null}

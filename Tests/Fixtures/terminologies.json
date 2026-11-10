@@ -1,0 +1,1 @@
+{"TerminologyPropertiesList": [{"Name": "rooms-fr-en", "SourceLanguageCode": "fr", "TargetLanguageCodes": ["en"], "TermCount": 2, "CreatedAt": 1794301200}, {"Name": "brands", "Description": "Brands", "SourceLanguageCode": "en", "TargetLanguageCodes": ["fr", "ja"], "TermCount": 4, "CreatedAt": 1794218400}]}
