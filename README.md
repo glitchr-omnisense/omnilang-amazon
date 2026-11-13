@@ -13,6 +13,13 @@ the package itself (checked against AWS's own test suite).
 
 Amazon Translate has no detection call of its own.
 
+```sh
+composer require omnisense/omnilang omnilang/amazon
+```
+
+It needs an AWS account and IAM credentials allowed to call Amazon Translate. Its tests run on recorded answers and need none; omnilang's README has a first call
+on a recorded client.
+
 ```php
 use Omnilang\Amazon\AmazonFactory;
 use Omnilang\Model\{Formality, TranslationQuery};
